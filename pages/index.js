@@ -3,7 +3,7 @@ import useSWR from "swr";
 import { useContext, useEffect, useRef, useState } from "react";
 import { address } from "./_app";
 import Map from "../components/Mapdyno";
-const arrow = require("../images/icon-arrow.svg");
+const arrow = require("../public/images/icon-arrow.svg");
 
 export default function Home() {
   const [location, setlocation] = useContext(address);
@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <div className="main-wrapper">
-      <header className="search">
+      <header className="search bg-blueBg">
         <div>
           <h1 className="text-5xl text-white my-5">IP Address Tracker</h1>
         </div>
