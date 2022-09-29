@@ -86,7 +86,7 @@ header .search-input label button {
   border-radius: 10px;
   color: var(--Dark-Gray);
 }
-.ipaddress-location div:not(:first-child) {
+.ipaddress-location div {
   position: relative;
   text-align: left;
   width: 25%;
