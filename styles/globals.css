@@ -119,16 +119,16 @@ header .search-input label button {
     width: 90%;
   }
   header .search-input {
-    height: 20%;
+    height: 40px;
   }
-  .ipaddress-location div{
-    height: 25%;
+  .ipaddress-location div {
+    height: 250px;
     width: 100%;
   }
   .ipaddress-location {
     top: 0%;
     width: 70%;
-    height: 35%;
+    height: 350px;
     transform: translateY(50%);
   }
 }
