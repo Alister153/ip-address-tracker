@@ -42,7 +42,7 @@ export default function Home() {
     <div className="main-wrapper">
       <header className="search bg-blueBg">
         <div>
-          <h1 className="text-5xl text-white my-5">IP Address Tracker</h1>
+          <h1 className="text-xl lg:text-5xl text-white my-5">IP Address Tracker</h1>
         </div>
         <div className="search-input">
           <label>
@@ -58,7 +58,7 @@ export default function Home() {
           </label>
         </div>
       </header>
-      <div className="ipaddress-location">
+      <div className="ipaddress-location flex-col lg:flex-row">
         <div className="ipaddress">
           <p>IP ADDRESS</p>
           <p className="deets">{location && location.ip}</p>

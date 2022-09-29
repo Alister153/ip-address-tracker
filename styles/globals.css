@@ -113,3 +113,22 @@ header .search-input label button {
   min-height: 70vh !important;
   height: 70vh !important;
 }
+
+@media only screen and (max-width: 500px) {
+  header > * {
+    width: 90%;
+  }
+  header .search-input {
+    height: 20%;
+  }
+  .ipaddress-location div{
+    height: 25%;
+    width: 100%;
+  }
+  .ipaddress-location {
+    top: 0%;
+    width: 70%;
+    height: 35%;
+    transform: translateY(50%);
+  }
+}
