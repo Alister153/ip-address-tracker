@@ -9,6 +9,7 @@ export default function Home() {
   const [location, setlocation] = useContext(address);
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const [inputAddress, setInputAddress] = useState("");
+  const [screenWidth, setScreenWidth] = useState();
   const { data, error } = useSWR(
     `https://geo.ipify.org/api/v2/country,city?apiKey=at_m7ooW6Ezzwe2ryE8CMTMRjv91i6Nt&ipAddress=${inputAddress}`,
     fetcher
@@ -27,6 +28,10 @@ export default function Home() {
   };
 
   useEffect(() => {
+    setScreenWidth(window.screen.width);
+    document.addEventListener("resize", () => {
+      setScreenWidth(window.screen.width);
+    });
     if (data !== undefined) {
       if (data.code) {
         ipAddress.current.value = "";
@@ -62,7 +67,7 @@ export default function Home() {
         </div>
       </header>
       <div className="ipaddress-location flex-col lg:flex-row">
-        {window.screen.width < 500 && (
+        {screenWidth < 500 && (
           <div
             className="open-address p-2 bg-black"
             onClick={(e) => {
