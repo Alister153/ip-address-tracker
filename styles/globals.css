@@ -115,6 +115,9 @@ header .search-input label button {
 }
 
 @media only screen and (max-width: 500px) {
+  header{
+    height: 200px;
+  }
   header > * {
     width: 90%;
   }
@@ -129,6 +132,6 @@ header .search-input label button {
     top: 0%;
     width: 70%;
     height: 350px;
-    transform: translateY(50%);
+    transform: translateY(40%);
   }
 }

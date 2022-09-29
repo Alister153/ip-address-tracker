@@ -48,7 +48,7 @@ export default function Home() {
           <label>
             <input
               type="text"
-              className="text-xs text-2xl"
+              className="text-xs lg:text-2xl"
               ref={ipAddress}
               onKeyDown={handleEnter}
               placeholder="Search for any IP address or domain"
