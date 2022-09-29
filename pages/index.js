@@ -60,6 +60,10 @@ export default function Home() {
         </div>
       </header>
       <div className="ipaddress-location flex-col lg:flex-row">
+        <div className="open-address p-2 bg-black" onClick={(e) => {
+          e.target.parentElement.classList.toggle("active")
+        }}>
+        </div>
         <div className="ipaddress">
           <p>IP ADDRESS</p>
           <p className="deets">{location && location.ip}</p>

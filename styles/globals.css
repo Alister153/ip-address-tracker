@@ -86,7 +86,7 @@ header .search-input label button {
   border-radius: 10px;
   color: var(--Dark-Gray);
 }
-.ipaddress-location div {
+.ipaddress-location div:not(:first-child) {
   position: relative;
   text-align: left;
   width: 25%;
@@ -124,14 +124,20 @@ header .search-input label button {
   header .search-input {
     height: 40px;
   }
-  .ipaddress-location div {
-    height: 250px;
-    width: 100%;
-  }
   .ipaddress-location {
+    height: 15px;
+    top: 15%;
+    transform: translateY(25%);
+    overflow: hidden;
+  }
+  .ipaddress-location.active {
     top: 0%;
     width: 70%;
     height: 350px;
     transform: translateY(40%);
+  }
+  .ipaddress-location div:not(:first-child) {
+    height: 250px;
+    width: 100%;
   }
 }
