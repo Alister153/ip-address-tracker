@@ -126,8 +126,8 @@ header .search-input label button {
   }
   .ipaddress-location {
     height: 15px;
-    top: 15%;
-    transform: translateY(25%);
+    top: 20%;
+    transform: translateY(50%);
     overflow: hidden;
   }
   .ipaddress-location.active {
