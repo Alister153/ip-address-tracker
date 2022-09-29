@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+}
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+header {
+  color: white;
+  width: 100%;
+  height: 30vh;
+  background-image: url(../images/pattern-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header > * {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+header .search-input {
+  height: 30%;
+}
+header .search-input label {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  width: 100%;
+  overflow: hidden;
+}
+header .search-input label input {
+  width: 90%;
+  padding: 0px 20px;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+}
+header .search-input label input.incorrect::placeholder {
+  color: red;
+  font-weight: 600;
+}
+header .search-input label button {
+  width: 10%;
+  border-radius: 0px 0px 0px 0px;
+  background-color: var(--Very-Dark-Gray);
+  border: none;
+}
+.ipaddress-location {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  top: 5%;
+  transform: translateY(90%);
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+  height: 20%;
+  border-radius: 10px;
+  color: var(--Dark-Gray);
+}
+.ipaddress-location div {
+  position: relative;
+  text-align: left;
+  width: 25%;
+  height: 100%;
+  padding: 10px 30px;
+}
+.ipaddress-location .deets {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--Very-Dark-Gray);
+}
+.ipaddress-location div:not(:last-child) ::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 99.8%;
+  right: 0%;
+  background-color: var(--Dark-Gray);
+}
+.leaflet-container {
+  position: relative;
+  z-index: 1;
+  min-height: 70vh !important;
+  height: 70vh !important;
+}
