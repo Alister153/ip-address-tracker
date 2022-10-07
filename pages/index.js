@@ -11,7 +11,7 @@ export default function Home() {
   const [inputAddress, setInputAddress] = useState("");
   const [screenWidth, setScreenWidth] = useState();
   const { data, error } = useSWR(
-    `https://geo.ipify.org/api/v2/country,city?apiKey=at_m7ooW6Ezzwe2ryE8CMTMRjv91i6Nt&ipAddress=${inputAddress}`,
+    `https://geo.ipify.org/api/v2/country,city?apiKey=at_zZeaKP9wvUKcnvz6MmY2S2nFAavSf&ipAddress=${inputAddress}`,
     fetcher
   );
   const ipAddress = useRef();
@@ -34,11 +34,14 @@ export default function Home() {
     });
     if (data !== undefined) {
       if (data.code) {
-        ipAddress.current.value = "";
-        ipAddress.current.classList.add("incorrect");
-        setTimeout(() => {
-          ipAddress.current.classList.remove("incorrect");
-        }, 2000);
+        if (data.code === 403) alert("No more credits to get location.");
+        else {
+          ipAddress.current.value = "";
+          ipAddress.current.classList.add("incorrect");
+          setTimeout(() => {
+            ipAddress.current.classList.remove("incorrect");
+          }, 2000);
+        }
       } else setlocation(data);
     }
   }, [data, setlocation]);
